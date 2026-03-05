@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog de David Pinzon</title>
+
+<style>
+
+/* Imagen de fondo transparente con degradado verde */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,150,90,0.8), rgba(0,80,60,0.9)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* contenedor central del blog */
+main{
+    max-width:900px;
+    padding:40px;
+    background:rgba(0,0,0,0.35);
+    border-radius:15px;
+    backdrop-filter: blur(5px);
+}
+
+/* título principal */
+h1{
+    margin-bottom:25px;
+    font-size:32px;
+    color:#000000;
+    -webkit-text-stroke: 1px white;
+}
+
+/* subtítulos de secciones */
+h2{
+    margin-top:30px;
+    margin-bottom:10px;
+    color:#000000bc;
+    -webkit-text-stroke: 0.3px white;
+}
+
+/* estilo de párrafos */
+p{
+    line-height:1.6;
+}
+
+/* lista de selectores avanzados */
+ul{
+    list-style:none;
+    padding:0;
+}
+
+/* separación de elementos de lista */
+li{
+    margin:8px 0;
+}
+
+/* punto decorativo usando pseudo-elemento */
+li::before{
+    content:" - ";
+    color:#7CFFB2;
+}
+
+/* galería de imágenes usando grid */
+section{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:15px;
+}
+
+/* estilo de las imágenes */
+section img{
+    width:100%;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+/* hover que agranda las imágenes */
+section img:hover{
+    transform:scale(1.15);
+}
+
+/* botón para volver al perfil */
+a{
+    display:inline-block;
+    margin-top:30px;
+    padding:10px 20px;
+    background:linear-gradient(45deg,#00ff9c,#00b36b);
+    color:rgb(0, 0, 0);
+    text-decoration:none;
+    border-radius:8px;
+}
+
+/* efecto hover en el botón */
+a:hover{
+    transform:scale(1.05);
+}
+
+section{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:15px;
+}
+
+section img{
+    width:100%;
+    border-radius:10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+section img:hover{
+    transform:scale(1.12);
+    filter: brightness(1.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<h1>Blog de David Pinzon</h1>
+
+<h2>Conclusiones sobre la especificidad de CSS</h2>
+
+<p>
+En CSS, la especificidad es el método que establece qué estilos se implementan cuando
+Distintas normas tienen impacto sobre el mismo elemento. Es importante entender este concepto.
+debido a que facilita la organización del código y previene discrepancias entre estilos.
+
+A lo largo de este ejercicio, comprendí que los selectores más específicos tienen mayor prioridad.
+en lo que respecta a los generales, lo cual contribuye a una mejor gestión del diseño de una página web.
+</p>
+
+<h2>Selectores avanzados que me costaron entender</h2>
+
+<ul>
+<li>Pseudo-clase :hover: cambia el estilo cuando el usuario pasa el cursor sobre un elemento.</li>
+<li>Pseudo-elemento ::before: permite agregar contenido visual antes de un elemento.</li>
+</ul>
+
+<h2>Galería de imágenes</h2>
+    
+<section>
+    <img src="1.png" alt="programador ilustrado">
+    <img src="2.png" alt="codificacion en pantalla">
+    <img src="3.png" alt="desarrollo creativo">
+</section>
+
+<h2>Explicación de Mobile-First</h2>
+
+<p>
+La metodología de desarrollo web conocida como Mobile-First consiste en diseñar inicialmente
+para dispositivos móviles y, posteriormente, ajustar el diseño para pantallas de mayor tamaño.
+Esto posibilita la creación de páginas más veloces y optimizadas para dispositivos móviles, los cuales son el
+dispositivo más empleado para navegar la web.
+
+En el proyecto del perfil, se utilizó el enfoque Mobile-First, en el que primero se desarrolló un diseño.
+vertical para pantallas pequeñas y luego con una media query de 768 píxeles
+para modificar el diseño a dos columnas  usando CSS Grid y organizar el menú con
+Flexbox en pantallas de escritorio.
+</p>
+
+<a href="../index.html">Volver al inicio</a>
+
+</main>
+
+</body>
+</html>

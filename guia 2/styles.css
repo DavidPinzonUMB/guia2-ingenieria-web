@@ -1,0 +1,126 @@
+/* Reset básico para evitar márgenes y paddings extra */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fondo degradado suave */
+body {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal con sombra y borde redondeado */
+.profile-container {
+    background: white;
+    max-width: 700px;
+    width: 100%;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+/* Vista escritorio con dos columnas */
+@media(min-width: 768px) {
+    .profile-container {
+        grid-template-columns: 200px 1fr;
+        gap: 40px;
+    }
+}
+
+/* Header: centrado y con espacio */
+header {
+    text-align: center;
+}
+
+/* Imagen perfil circular con sombra */
+header img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+/* Nombre destacado */
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+/* Main: texto e info alineados */
+main {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Párrafo principal */
+main > p:first-of-type {
+    margin-bottom: 15px;
+}
+
+/* Menú de navegación con flexbox y espaciado */
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+/* Links del menú con puntos antes y estilos */
+nav ul li a {
+    color: #0066cc;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    padding-left: 12px;
+}
+
+/* Pseudo-elemento para punto decorativo antes del link */
+nav ul li a::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #009933;
+    font-weight: 900;
+}
+
+/* Hover en links del menú */
+nav ul li a:hover {
+    color: #004999;
+    text-decoration: underline;
+}
+
+/* Lista de blogs (ul) con margen y estilo */
+main ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #333;
+}
+
+/* Links de blogs con estilo */
+main ul li a {
+    color: #800080;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Hover links blogs */
+main ul li a:hover {
+    color: #b300b3;
+    text-decoration: none;
+}
