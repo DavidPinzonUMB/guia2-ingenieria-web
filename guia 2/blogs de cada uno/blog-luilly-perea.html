@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog de Luilly Perea Vivas</title>
+
+<style>
+
+/* fondo oscuro elegante con degradado */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background:
+        linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(30, 30, 30, 0.9)),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+    background-size: cover;
+    background-position: center;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* contenedor central del blog */
+main {
+    max-width: 900px;
+    width: 100%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+/* titulo principal con acento dorado */
+h1 {
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+/* subtitulos de secciones */
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #c0a030;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 6px;
+}
+
+/* estilo de parrafos */
+p {
+    line-height: 1.7;
+    color: #ccc;
+    text-align: justify;
+}
+
+/* lista de selectores avanzados */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+/* separacion de elementos de lista */
+li {
+    margin: 10px 0;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    border-left: 3px solid #d4af37;
+}
+
+/* punto decorativo usando pseudo-elemento */
+li::before {
+    content: "\25C6 ";
+    color: #d4af37;
+    font-size: 10px;
+    margin-right: 6px;
+}
+
+/* galeria de imagenes usando grid */
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* vista escritorio: tres columnas */
+@media (min-width: 768px) {
+    section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* estilo de las imagenes */
+section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* hover que agranda y resalta las imagenes */
+section img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.15);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+}
+
+/* boton para volver al perfil */
+a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #d4af37, #a8872b);
+    color: #000;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* efecto hover en el boton */
+a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<main>
+
+<h1>Blog de Luilly Perea Vivas</h1>
+
+<h2>Conclusiones sobre la especificidad de CSS</h2>
+
+<p>
+La especificidad en CSS es el mecanismo que determina cuales estilos prevalecen cuando
+varias reglas compiten por afectar al mismo elemento. Comprender esto es esencial porque
+permite escribir hojas de estilo predecibles y mantenibles, evitando que los estilos
+se sobreescriban de forma inesperada. Durante este ejercicio aprendi que la jerarquia
+de selectores (elemento, clase, ID, inline) define que regla gana, y que dominar este
+concepto reduce significativamente el tiempo dedicado a depurar problemas visuales.
+Tambien comprendi que usar selectores con la especificidad justa, ni muy generales ni
+excesivamente especificos, es la clave para un CSS limpio y escalable.
+</p>
+
+<h2>Selectores avanzados que mas me costaron entender</h2>
+
+<ul>
+<li>Selector de descendiente (ul li a): al principio confundia el alcance de este selector,
+ya que aplica a todos los elementos anidados sin importar la profundidad, lo que a veces
+generaba estilos no deseados en listas dentro de listas.</li>
+<li>Pseudo-clase :hover: aunque su uso basico es simple, entender como combinarlo con
+transiciones y transforms para lograr efectos suaves requirio practica y experimentacion.</li>
+<li>Pseudo-elemento ::before: el concepto de insertar contenido visual que no existe en el
+HTML fue algo nuevo para mi. Entender que no es un elemento real del DOM sino un recurso
+puramente visual tomo algo de tiempo.</li>
+<li>Media queries con min-width: la logica de Mobile-First invierte la forma intuitiva de
+pensar los breakpoints, fue necesario cambiar la mentalidad de "ocultar en movil" a
+"agregar en escritorio".</li>
+</ul>
+
+<h2>Galeria de imagenes</h2>
+
+<section>
+    <img src="https://images.unsplash.com/photo-1671643774118-a55ea38b2202?fit=crop&w=600&h=400&q=80" alt="Harley Davidson Sportster S">
+    <img src="https://images.unsplash.com/photo-1558980664-4d79c6e77b93?fit=crop&w=600&h=400&q=80" alt="Harley Davidson negra">
+    <img src="https://images.unsplash.com/photo-1770827693682-487a2e4ffef1?fit=crop&w=600&h=400&q=80" alt="Kawasaki Ninja deportiva negra">
+</section>
+
+<h2>Explicacion de Mobile-First</h2>
+
+<p>
+Mobile-First es una metodologia de desarrollo web que consiste en disenar primero para
+las pantallas mas pequenas (celulares) y luego ir anadiendo estilos adicionales para
+pantallas mas grandes mediante media queries con min-width. El principal beneficio de
+este enfoque es que garantiza que la experiencia base sea ligera y funcional en
+dispositivos moviles, que hoy en dia representan la mayor parte del trafico web.
+Ademas, al partir de lo esencial, se evita cargar estilos innecesarios en dispositivos
+con menos recursos.
+</p>
+
+<p>
+En el proyecto del perfil, aplicamos Mobile-First de la siguiente manera: los estilos
+base definen un layout de una sola columna donde el contenido se apila verticalmente,
+lo cual funciona perfectamente en pantallas pequenas. Luego, mediante una media query
+con min-width de 768px, activamos CSS Grid con dos columnas para la vista de escritorio
+y organizamos el menu de navegacion horizontalmente con Flexbox. La logica es clara:
+empezar con lo minimo y expandir, no al reves.
+</p>
+
+<a href="indexluilly.html">Volver al inicio</a>
+
+</main>
+
+</body>
+</html>
